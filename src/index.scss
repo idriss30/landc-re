@@ -1,0 +1,9 @@
+@import "./config";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: $site_background;
+}
