@@ -3,7 +3,19 @@
 * {
   margin: 0px;
   padding: 0px;
+  line-height: 1.4rem;
 }
 body {
-  background-color: $site_background;
+  font-family: Arial, Helvetica, sans-serif;
+
+  @media only screen and(max-width:420px) {
+    font-size: 0.8rem;
+  }
+
+  background: rgb(221, 224, 189);
+  background: linear-gradient(
+    60deg,
+    rgba(221, 224, 189, 1) 20%,
+    rgba(97, 112, 79, 1) 100%
+  );
 }

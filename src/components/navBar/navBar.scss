@@ -4,6 +4,7 @@
   width: 100%;
   height: auto;
   font-weight: bold;
+  z-index: 1000;
   background-color: $hover-color;
   &__list-desktop {
     list-style: none;

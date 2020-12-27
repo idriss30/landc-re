@@ -5,10 +5,11 @@
 <style type="text/css">
 	.st0{display:none;}
 	.st1{fill:#61704F;stroke:#DDE0BD;stroke-width:0.5;stroke-miterlimit:10;}
-	.st2{fill:#DDE0BD;}
+	.st2{fill:#61704F;}
 	.st3{font-family:'ArialMT';}
 	.st4{font-size:12px;}
-	.st5{fill:none;stroke:#DDE0BD;stroke-width:0.5;stroke-miterlimit:10;}
+	.st5{fill:#61704F;stroke:#61704F;stroke-width:3;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#61704F;stroke-width:3;stroke-miterlimit:10;}
 </style>
 <g id="Layer_1" class="st0">
 	
@@ -540,6 +541,6 @@ YVBWHDcaCKNgFIyCUTAKRsEoGAWjYBSMgqEOAG9We8bcGifRAAAAAElFTkSuQmCC" transform="mat
 		C14.5,33.5,13.5,32.5,12.5,31.5z"/>
 	<text transform="matrix(1 0 0 1 20.9785 85.4258)" class="st2 st3 st4">LandC@re</text>
 	<line class="st5" x1="17.5" y1="72.5" x2="80.5" y2="72.5"/>
-	<line class="st5" x1="18" y1="89.5" x2="81" y2="89.5"/>
+	<line class="st6" x1="18" y1="89.5" x2="81" y2="89.5"/>
 </g>
 </svg>

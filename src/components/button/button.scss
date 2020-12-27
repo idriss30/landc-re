@@ -6,7 +6,15 @@
   padding: 0.4rem;
   width: 10rem;
   color: $secondary-color;
+  outline: none;
   &-small {
     width: 5rem;
+  }
+  &:hover {
+    background-color: $tertiary-color;
+  }
+  @media only screen and(max-width:420px) {
+    width: auto;
+    padding: 0.2rem;
   }
 }

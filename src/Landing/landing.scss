@@ -1,0 +1,11 @@
+@import "../config";
+
+.landing__container {
+  width: 80vw;
+  height: 100vh;
+  margin: 8rem auto;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: -2px 22px 15px 10px rgba(0, 0, 0, 0.61);
+}
