@@ -7,7 +7,6 @@ const LottieAnimation = ({ source, looping }) => {
       loop={looping}
       animationData={source}
       play
-      style={{ width: "100%", height: "100%" }}
       rendererSettings={{ preserveAspectRatio: "none" }}
     />
   );

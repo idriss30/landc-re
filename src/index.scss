@@ -6,16 +6,12 @@
   line-height: 1.4rem;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
+  font-size: 1.2rem;
 
   @media only screen and(max-width:420px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
-  background: rgb(221, 224, 189);
-  background: linear-gradient(
-    60deg,
-    rgba(221, 224, 189, 1) 20%,
-    rgba(97, 112, 79, 1) 100%
-  );
+  background-color: white;
 }
