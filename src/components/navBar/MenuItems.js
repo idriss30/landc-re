@@ -1,22 +1,22 @@
 const menuItems = [
   {
     title: "Home",
-    link: "#",
+    link: "/",
     styling: "nav__bar--links",
   },
   {
     title: "About Us",
-    link: "#",
+    link: "about",
     styling: "nav__bar--links",
   },
   {
     title: "Services",
-    link: "#",
+    link: "/service",
     styling: "nav__bar--links",
   },
   {
     title: "Contact Us",
-    link: "#",
+    link: "/contact",
     styling: "nav__bar--links",
   },
 ];

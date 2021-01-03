@@ -1,7 +1,6 @@
 import React from "react";
 import "./landing.scss";
 import Button from "../components/button/button";
-import NavBar from "../components/navBar/navBar";
 import LottieAnimation from "../components/LottieComponent/lottieComponent";
 import forestJson from "./landingsvg/forest.json";
 import landingJson from "./landingsvg/landing.json";
@@ -16,7 +15,6 @@ class Landing extends React.Component {
   render() {
     return (
       <>
-        <NavBar />
         <div className="landing">
           <div className="landing__container">
             <div className="landing__container-text">

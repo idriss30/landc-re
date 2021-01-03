@@ -1,12 +1,12 @@
 import React from "react";
 
-import Landing from "./Landing/landing";
+import NavBar from "./components/navBar/navBar";
 
 class App extends React.Component {
   render() {
     return (
       <>
-        <Landing />
+        <NavBar />
       </>
     );
   }
