@@ -17,6 +17,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 8rem auto;
+  height: 100%;
 
   @media only screen and (max-width: 720px) {
     margin: 2rem auto 0rem auto;
@@ -34,6 +35,10 @@
 
   button {
     margin: 1rem;
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+    }
   }
   &__container {
     @include sectionCss();
@@ -85,6 +90,7 @@
     p {
       line-height: 2rem;
       text-align: justify;
+      width: 90%;
     }
     @media only screen and (max-width: 720px) {
       flex-basis: 60%;
@@ -150,6 +156,7 @@
   button {
     width: 40%;
   }
+
   &__container {
     @include flexGrid();
 
@@ -178,7 +185,7 @@
       flex-basis: 60%;
       background-color: whitesmoke;
       border-radius: 5px;
-      height: 80vh;
+      height: 100%;
       text-align: center;
       color: black;
 

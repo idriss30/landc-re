@@ -1,0 +1,32 @@
+@import "../config";
+
+.service {
+  * {
+    box-sizing: border-box;
+  }
+  width: 80%;
+  margin: 5rem auto;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  padding: 1rem;
+  min-height: 100vh;
+
+  h1 {
+    color: $secondary-color;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%;
+  }
+}

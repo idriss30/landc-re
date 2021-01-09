@@ -11,6 +11,7 @@ import budget from "./landingAssets/budget.png";
 import satisfaction from "./landingAssets/satisfaction.png";
 import environment from "./landingAssets/environment.png";
 import Footer from "../components/footer/footer";
+import { Link } from "react-router-dom";
 class Landing extends React.Component {
   render() {
     return (
@@ -20,8 +21,12 @@ class Landing extends React.Component {
             <div className="landing__container-text">
               <h1> Professional Landscaping in central Mass</h1>
               <p>100% service guarantee</p>
-              <Button scss={"btn"}>About Us</Button>
-              <Button scss={"btn"}>Contact Us</Button>
+              <Button scss={"btn"}>
+                <Link to="/about">About us</Link>
+              </Button>
+              <Button scss={"btn"}>
+                <a href="#contact">Contact Us</a>
+              </Button>
             </div>
             <div className="landing__container-animation">
               <LottieAnimation source={forestJson} looping={false} />
@@ -41,13 +46,9 @@ class Landing extends React.Component {
                   Therefore, we stand behind our work with pride.
                 </p>
                 <p>
-                  Our experts specialize in landscape maintenance, and snow &
-                  ice management.
-                </p>
-
-                <p>
-                  We are always ready to create outstanding experiences for our
-                  clients and provide a service second to none.
+                  Our experts specialize in landscape maintenance We are always
+                  ready to create outstanding experiences for our clients and
+                  provide a service second to none.
                 </p>
               </div>
             </div>
@@ -103,8 +104,9 @@ class Landing extends React.Component {
             </div>
             <Button scss="btn">Learn More</Button>
           </section>
+
           <section className="get__in__touch">
-            <div className="get__in__touch__container">
+            <div className="get__in__touch__container" id="contact">
               <div className="get__in__touch__container-text">
                 <h4>Get Started</h4>
                 <p>

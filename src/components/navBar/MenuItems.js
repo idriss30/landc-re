@@ -11,7 +11,7 @@ const menuItems = [
   },
   {
     title: "Services",
-    link: "/service",
+    link: "/services",
     styling: "nav__bar--links",
   },
   {
