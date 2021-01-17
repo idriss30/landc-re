@@ -9,6 +9,43 @@ import budget from "../Landing/landingAssets/budget.png";
 import satisfaction from "../Landing/landingAssets/satisfaction.png";
 import environment from "../Landing/landingAssets/environment.png";
 
+class Questions extends React.Component {
+  constructor(props) {
+    super(props);
+    // create state for button icon
+    this.state = {
+      isClicked: false,
+    };
+  }
+
+  handleClick = () => {
+    this.setState({ isClicked: !this.state.isClicked });
+  };
+
+  // create onClick function
+  // set state to true and display
+  render() {
+    return (
+      <div className="about__questions-group">
+        <p className="about__question-question">
+          {this.props.question}
+          <span className="about__question-icon">
+            <i
+              onClick={this.handleClick}
+              className={
+                this.state.isClicked
+                  ? "fas fa-minus-circle"
+                  : "fas fa-plus-circle"
+              }
+            ></i>
+          </span>
+        </p>
+        <p>{this.state.isClicked && this.props.answer}</p>
+      </div>
+    );
+  }
+}
+
 function About() {
   return (
     <>
@@ -84,97 +121,41 @@ function About() {
       <section className="about__questions">
         <h4>Frequently asked Questions!</h4>
         <div className="about_questions__container">
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              What Areas Do You Serve?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>Landc@re serves all central Mass</p>
-          </div>
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              Are You Licensed?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>Yes our professionals are licenced and insured!</p>
-          </div>
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              What Is Your 100% Satisfaction Guarentee?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>
-              We want you to love the results. However, if you're not completely
-              happy, give us a call within 24 hours and we'll come back to fix
-              any errors absolutely free.
-            </p>
-          </div>
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              What Do You Do With The Grass Clippings?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>
-              Once the grass is cut, we immediately turn them into mulch. This
-              will help to keep your grass healthy, cut down the cost of buying
-              mulch from the store, and is less expensive than to bag and
-              dispose of them.
-            </p>
-          </div>
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              Are The Chemicals From LandC@re Dangerous To My Kids Or Pets?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>
-              If your lawn has been treated with chemicals within the last 24
-              hours, it's recommended to keep pets and people off the grass. 24
-              hours is usually enough time to be safe, but always ask your
-              professional how long you should stay off your lawn each time
-              chemicals are applied.
-            </p>
-          </div>
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              Will You Always Send The Same Professional?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>
-              There is value in having the same professional working on your
-              property due to the trust that is built and them knowing the
-              specific needs of your lawn. While we'll try to send the same
-              professionals to your property each time, there are times in which
-              that isn't possible.
-            </p>
-          </div>
-          <div className="about__questions-group">
-            <p className="about__question-question">
-              Do I Have To Be At Home During My Service?
-              <span className="about__question-icon">
-                <i className="fas fa-plus-circle"></i>
-              </span>
-            </p>
-            <p>
-              You don't need to be at home while your lawn is being serviced.
-              However, we do ask that we have access to the area you need
-              serviced, and that any pets are kept either indoors or in a
-              contained area.
-            </p>
-          </div>
+          <Questions
+            question="What area do you serve ?"
+            answer="landC@re is proud to serve central mass"
+          />
+          <Questions
+            question="Are you licensed ?"
+            answer="Our professionals are licensed and insured"
+          />
+
+          <Questions
+            question="What Is Your 100% Satisfaction Guarentee? "
+            answer="We want you to love the results. However, if you're not completely happy, give us a call within 24 hours and we'll come back to fix any errors absolutely free."
+          />
+
+          <Questions
+            question="What Do You Do With The Grass Clippings?"
+            answer="Once the grass is cut, we immediately turn them into mulch. This will help to keep your grass healthy, cut down the cost of buying mulch from the store, and is less expensive than to bag and dispose of them."
+          />
+          <Questions
+            question="Are The Chemicals From The Lawn Care Dangerous To My Kids Or Pets?"
+            answer="If your lawn has been treated with chemicals within the last 24 hours, it's recommended to keep pets and people off the grass. 24 hours is usually enough time to be safe, but always ask your professional how long you should stay off your lawn each time chemicals are applied."
+          />
+
+          <Questions
+            question="Will You Always Send The Same Professional?"
+            answer="There is value in having the same professional working on your property due to the trust that is built and them knowing the specific needs of your lawn. While we'll try to send the same professionals to your property each time, there are times in which that isn't possible."
+          />
+
+          <Questions
+            question="Do I Have To Be At Home During My Service?"
+            answer="You don't need to be at home while your lawn is being serviced. However, we do ask that we have access to the area you need serviced, and that any pets are kept either indoors or in a contained area."
+          />
         </div>
       </section>
+
       <Footer />
     </>
   );

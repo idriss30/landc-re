@@ -9,6 +9,9 @@
   &__list-desktop {
     list-style: none;
     align-self: center;
+    animation: fadeInRight;
+    animation-duration: 2s;
+
     @media only screen and (max-width: 768px) {
       display: none;
     }
@@ -37,6 +40,8 @@
     img {
       width: 90px;
       height: 62px;
+      animation: fadeInLeft;
+      animation-duration: 2s;
     }
 
     .nav__bar-links {

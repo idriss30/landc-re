@@ -14,11 +14,6 @@ const menuItems = [
     link: "/services",
     styling: "nav__bar--links",
   },
-  {
-    title: "Contact Us",
-    link: "/contact",
-    styling: "nav__bar--links",
-  },
 ];
 
 export default menuItems;

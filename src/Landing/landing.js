@@ -12,6 +12,9 @@ import satisfaction from "./landingAssets/satisfaction.png";
 import environment from "./landingAssets/environment.png";
 import Footer from "../components/footer/footer";
 import { Link } from "react-router-dom";
+
+import Form from "./form";
+
 class Landing extends React.Component {
   render() {
     return (
@@ -102,7 +105,9 @@ class Landing extends React.Component {
                 <p>Budget friendly</p>
               </div>
             </div>
-            <Button scss="btn">Learn More</Button>
+            <Button scss="btn">
+              <Link to="/about">Learn More</Link>
+            </Button>
           </section>
 
           <section className="get__in__touch">
@@ -125,41 +130,7 @@ class Landing extends React.Component {
                 </p>
               </div>
               <div className="get__in__touch__container-form">
-                <form id="contact" action="" method="post">
-                  <div className="form_Group">
-                    <label htmlFor="first">First: </label>
-                    <input type="text" required id="first" name="firstname" />
-                  </div>
-                  <div className="form_Group">
-                    <label htmlFor="last_name">Last Name: </label>
-                    <input
-                      type="text"
-                      required
-                      id="last_name"
-                      name="LastName"
-                    />
-                  </div>
-                  <div className="form_Group">
-                    <label htmlFor="email">Email: </label>
-                    <input type="email" id="email" required name="email" />
-                  </div>
-                  <div className="form_Group">
-                    <label htmlFor="phone">Phone Number (optional) :</label>
-                    <input type="text" name="phone" id="phone" />
-                  </div>
-
-                  <div className="form_Group">
-                    <textarea
-                      placeholder="Type your message here...."
-                      tabIndex="8"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <Button scss="btn" id="submit">
-                    Send Message
-                  </Button>
-                </form>
+                <Form />
               </div>
             </div>
           </section>

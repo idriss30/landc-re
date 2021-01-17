@@ -4,8 +4,9 @@ import "./service.scss";
 import Footer from "../components/footer/footer";
 import Button from "../components/button/button.js";
 import lush from "./serviceAssets/lush.svg";
-import green from "./serviceAssets/basic.svg";
+import green from "./serviceAssets/green.svg";
 import healthy from "./serviceAssets/healthy.svg";
+
 class Services extends React.Component {
   render() {
     return (
@@ -15,9 +16,9 @@ class Services extends React.Component {
             <div className="service__title">
               <h1>Our Services</h1>
               <h2>
-                Whether you need full-time lawn care services in metro Atlanta
-                or a one-time cleanup, Lawn Guy Pro offers a number of
-                landscaping services in Central Mass
+                Whether you need full-time lawn care services or a one-time
+                cleanup, Lawn Guy Pro offers a number of landscaping services in
+                Central Mass
               </h2>
             </div>
             <div className="service__content">

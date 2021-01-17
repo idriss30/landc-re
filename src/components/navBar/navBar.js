@@ -1,6 +1,8 @@
 import menuItems from "./MenuItems";
 import logo from "../../svgs/logo.svg";
+
 import "./navBar.scss";
+
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
@@ -12,7 +14,7 @@ const Links = ({ styleName }) => {
         <NavLink
           exact
           to={item.link}
-          activeStyle={{ color: " red", fontWeight: "bold" }}
+          activeStyle={{ color: "#d9125b", fontWeight: "bold" }}
         >
           {item.title}
         </NavLink>
@@ -44,6 +46,11 @@ class NavBar extends React.Component {
             </div>
             <ul className="nav__bar__list-desktop">
               <Links styleName="nav__bar-links" />
+              <li className="nav__bar-links">
+                <a href="/#contact" name="contact">
+                  Contact Us
+                </a>
+              </li>
             </ul>
             <div className="nav__bar__mobile">
               <button onClick={this.handleClick}>
@@ -53,10 +60,15 @@ class NavBar extends React.Component {
               </button>
               <div>
                 <ul className="nav__bar__list-mobile">
-                  {this.state.toggle ? (
+                  {this.state.toggle && (
                     <Links styleName="nav__bar-links-mobile" />
-                  ) : (
-                    ""
+                  )}
+                  {this.state.toggle && (
+                    <li className="nav__bar-links-mobile">
+                      <a href="/#contact" name="contact">
+                        Contact Us
+                      </a>
+                    </li>
                   )}
                 </ul>
               </div>
