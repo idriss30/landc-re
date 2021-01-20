@@ -19,14 +19,13 @@ class Form extends React.Component {
     return reGex.test(String(email).toLowerCase());
   };
 
-  formClick = (e) => {
+  formClick = async (e) => {
     // prevent default behavior
     e.preventDefault();
     // check email state
     const email = this.checkEmail(this.state.email);
     if (email) {
       const userData = { ...this.state };
-      console.log(userData);
     } else {
       alert("your email is not valid!");
     }

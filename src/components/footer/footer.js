@@ -10,26 +10,17 @@ const Footer = () => {
           <ul>
             <li>
               <a href="https://www.facebook.com/">
-                <i
-                  className="fa fa-facebook-square social_icons "
-                  aria-hidden="true"
-                ></i>
+                <i className="fab fa-facebook-square "></i>
               </a>
             </li>
             <li>
               <a href="https://www.twitter.com/">
-                <i
-                  className="fa fa-twitter social_icons"
-                  aria-hidden="true"
-                ></i>
+                <i className="fab fa-twitter"></i>
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/">
-                <i
-                  className="fa fa-instagram social_icons"
-                  aria-hidden="true"
-                ></i>
+                <i className="fab fa-instagram"></i>
               </a>
             </li>
           </ul>
