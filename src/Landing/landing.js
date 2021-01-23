@@ -12,13 +12,17 @@ import satisfaction from "./landingAssets/satisfaction.png";
 import environment from "./landingAssets/environment.png";
 import Footer from "../components/footer/footer";
 import { Link } from "react-router-dom";
-
+import Popup from "../popup/popup.js";
 import Form from "./form";
 
 class Landing extends React.Component {
   render() {
     return (
       <>
+        <Popup>
+          thank you, your message has been submitted.
+          <br /> we will get back to you as soon as possible.
+        </Popup>
         <div className="landing">
           <div className="landing__container">
             <div className="landing__container-text">

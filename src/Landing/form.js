@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../components/button/button";
+import axios from "axios";
 
 class Form extends React.Component {
   constructor(props) {
@@ -18,7 +19,12 @@ class Form extends React.Component {
     const reGex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return reGex.test(String(email).toLowerCase());
   };
-
+  resetForm = () => {
+    this.setState(
+      { firstName: "", lastName: "", email: "", phone: "", textArea: "" },
+      () => {}
+    );
+  };
   formClick = async (e) => {
     // prevent default behavior
     e.preventDefault();
@@ -26,8 +32,19 @@ class Form extends React.Component {
     const email = this.checkEmail(this.state.email);
     if (email) {
       const userData = { ...this.state };
+      // send the request
+      axios
+        .post("http://localhost:4000/form", { userData })
+        .then((response) => {
+          if (response.data.message === "success") {
+            this.resetForm();
+          } else {
+            alert("some error with your message");
+          }
+        })
+        .catch((err) => console.log(err));
     } else {
-      alert("your email is not valid!");
+      alert("your email is not valid");
     }
   };
 
@@ -54,6 +71,7 @@ class Form extends React.Component {
         return;
     }
   };
+
   render() {
     return (
       <>
