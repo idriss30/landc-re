@@ -2,6 +2,11 @@ import "./popup.scss";
 import React from "react";
 
 class Popup extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      window.location.replace("http://localhost:3000");
+    }, 3000);
+  }
   render() {
     return (
       <>

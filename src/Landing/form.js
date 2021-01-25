@@ -22,7 +22,9 @@ class Form extends React.Component {
   resetForm = () => {
     this.setState(
       { firstName: "", lastName: "", email: "", phone: "", textArea: "" },
-      () => {}
+      () => {
+        window.location.href = "http://localhost:3000/popup";
+      }
     );
   };
   formClick = async (e) => {
