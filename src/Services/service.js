@@ -2,7 +2,7 @@ import React from "react";
 
 import "./service.scss";
 import Footer from "../components/footer/footer";
-import Button from "../components/button/button.js";
+
 import lush from "./serviceAssets/lush.svg";
 import green from "./serviceAssets/green.svg";
 import healthy from "./serviceAssets/healthy.svg";
@@ -32,9 +32,6 @@ class Services extends React.Component {
                   cannot reach, and Blower Cleanup - to any debris from your
                   lawn care service.
                 </p>
-                <div className="service-button">
-                  <Button scss="btn">Select Package</Button>
-                </div>
               </div>
               <div className="service__content-group">
                 <img src={healthy} alt="service__image" name="service__image" />
@@ -46,9 +43,6 @@ class Services extends React.Component {
                   hinder the growth of your grass, and Organic Fertilizer - to
                   promote growth, health, and color of your grass.
                 </p>
-                <div className="service-button">
-                  <Button scss="btn">Select Package</Button>
-                </div>
               </div>
               <div className="service__content-group">
                 <img src={lush} alt="service__image" name="service__image" />
@@ -61,9 +55,6 @@ class Services extends React.Component {
                   soil compaction which will allow oxygen, water, and nutrients
                   to penetrate into the soil.
                 </p>
-                <div className="service-button">
-                  <Button scss="btn">Select Package</Button>
-                </div>
               </div>
             </div>
           </div>

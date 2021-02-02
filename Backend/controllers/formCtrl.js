@@ -23,3 +23,26 @@ module.exports.submitForm = async (req, res, next) => {
     })
     .catch((err) => console.log(err));
 };
+
+//get all the messages from the database
+
+module.exports.getMessages = (req, res, next) => {
+  Message.find((error, messages) => {
+    if (error) {
+      console.error(error);
+    } else {
+      res.json({ messages });
+    }
+  });
+};
+
+module.exports.getMessage = (req, res, next) => {
+  // find the message in the database
+  Message.findOne({ _id: req.params.id }, (error, message) => {
+    if (error) {
+      res.json({ error });
+    } else {
+      res.json({ message });
+    }
+  });
+};

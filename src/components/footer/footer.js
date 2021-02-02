@@ -32,6 +32,9 @@ const Footer = () => {
           This is a mockup, it is just for demonstration purpose. Do not
           reproduce or copy any materials on this website.
         </p>
+        <div>
+          <a href="/users/login">Admin Login</a>
+        </div>
       </div>
     </footer>
   );

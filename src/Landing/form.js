@@ -27,7 +27,7 @@ class Form extends React.Component {
       }
     );
   };
-  formClick = async (e) => {
+  formClick = (e) => {
     // prevent default behavior
     e.preventDefault();
     // check email state
