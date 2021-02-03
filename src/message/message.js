@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Button from "../components/button/button";
 import Footer from "../components/footer/footer.js";
+
 function MessageDisplay() {
   // extract the message id
   const { id } = useParams();
@@ -33,8 +34,33 @@ function MessageDisplay() {
             <li>message: {message.textArea}</li>
           </ul>
           <div>
-            <Button scss="sm">Delete</Button>
-            <Button scss="sm">Previous Page</Button>
+            <Button
+              scss="btn-small"
+              onClick={() => {
+                axios
+                  .get(
+                    `http://localhost:4000/form/message/delete/${message._id}`
+                  )
+                  .then((serverAnswer) => {
+                    if (serverAnswer.data.message === "success") {
+                      window.location.replace(
+                        "http://localhost:3000/users/profile"
+                      );
+                    }
+                  })
+                  .catch((err) => console.log(err));
+              }}
+            >
+              Delete
+            </Button>
+            <Button
+              scss="btn-small"
+              onClick={() => {
+                window.location.replace("http://localhost:3000/users/profile");
+              }}
+            >
+              Previous Page
+            </Button>
           </div>
         </div>
       </section>

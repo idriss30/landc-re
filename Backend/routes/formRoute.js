@@ -8,4 +8,6 @@ router.get("/messages", formCtrl.getMessages);
 
 router.get("/message/:id", formCtrl.getMessage);
 
+router.get("/message/delete/:id", formCtrl.deleteMessage);
+
 module.exports = router;

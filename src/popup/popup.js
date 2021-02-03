@@ -4,7 +4,7 @@ import React from "react";
 class Popup extends React.Component {
   componentDidMount() {
     setTimeout(() => {
-      window.location.replace("http://localhost:3000");
+      window.location.replace(this.props.url);
     }, 3000);
   }
   render() {
@@ -15,7 +15,9 @@ class Popup extends React.Component {
             <a href="/" alt="close-button">
               <i className="fas fa-times-circle"></i>
             </a>
-            <div className="popup__container-text">{this.props.children}</div>
+            <div className="popup__container-text">
+              <p>{this.props.children}</p>
+            </div>
           </div>
         </div>
       </>

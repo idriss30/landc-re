@@ -46,3 +46,11 @@ module.exports.getMessage = (req, res, next) => {
     }
   });
 };
+
+// create a controller to delete a message on click
+module.exports.deleteMessage = (req, res, next) => {
+  const id = req.params.id;
+  Message.deleteOne({ _id: id }, (err) => {
+    err ? console.log(err) : res.json({ message: "success" });
+  });
+};

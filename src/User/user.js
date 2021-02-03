@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Button from "../components/button/button";
 import "./user.scss";
+import Footer from "../components/footer/footer.js";
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -46,42 +47,45 @@ class Login extends React.Component {
   };
   render() {
     return (
-      <section className="login">
-        <div className="login__container">
-          <h1>Welcome to landC@re admin! </h1>
-          <h3>Please login below </h3>
-          <form
-            className="login__form"
-            onSubmit={this.submitForm}
-            method="POST"
-          >
-            <div className="login__form-group">
-              <input
-                type="text"
-                name="username"
-                required
-                id="username"
-                autoFocus
-                placeholder="username"
-                onChange={this.handleForm}
-              />
-            </div>
-            <div className="login__form-group">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                placeholder="password"
-                onChange={this.handleForm}
-              />
-            </div>
-            <div>
-              <Button scss="btn">login</Button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <>
+        <section className="login">
+          <div className="login__container">
+            <h1>Welcome to landC@re admin! </h1>
+            <h3>Please login below </h3>
+            <form
+              className="login__form"
+              onSubmit={this.submitForm}
+              method="POST"
+            >
+              <div className="login__form-group">
+                <input
+                  type="text"
+                  name="username"
+                  required
+                  id="username"
+                  autoFocus
+                  placeholder="username"
+                  onChange={this.handleForm}
+                />
+              </div>
+              <div className="login__form-group">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  placeholder="password"
+                  onChange={this.handleForm}
+                />
+              </div>
+              <div>
+                <Button scss="btn">login</Button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <Footer />
+      </>
     );
   }
 }
